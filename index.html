@@ -2,15 +2,23 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Rắn Săn Mồi</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1>Game Rắn Săn Mồi</h1>
-    <canvas id="gameCanvas" width="400" height="400"></canvas>
-    <button id="restartButton" onclick="resetGame()" style="display:none;">Replay</button>
+    <div class="game-container">
+        <canvas id="gameCanvas" width="400" height="400"></canvas>
+        <div>
+            <button onclick="startGame(150)">Cấp độ 1</button>
+            <button onclick="startGame(100)">Cấp độ 2</button>
+            <button onclick="startGame(50)">Cấp độ 3</button>
+        </div>
+        <p>Điểm: <span id="score">0</span></p>
+        <button id="restartButton" onclick="resetGame()" style="display:none;">Chơi Lại</button>
+    </div>
     <script src="snake.js"></script>
     <script src="game.js"></script>
 </body>
 </html>
-
